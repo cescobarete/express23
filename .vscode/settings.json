@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/9a957856-6565-4555-86ea-832b0bcd100e/resourceGroups/express23-rg/providers/Microsoft.Web/sites/express23-cae",
+    "appService.deploySubpath": "."
+}
