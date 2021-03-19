@@ -1,12 +1,10 @@
-var http = require('http');
-    var fs = require('fs');
+var express = require('express');
+var app = express();
+var path = require('path');
 
-    var server = http.createServer(function(req,res) {
-        console.log('request was made: '+ req.url);
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        var myReadStream = fs.createReadStream(__dirname + '/index.html','utf-8');
-        myReadStream.pipe(res);
-    });
+// viewed at http://localhost:3000
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
-server.listen(3000,'127.0.0.1');
-console.log('Now listening on port 3000');
+app.listen(3000);
